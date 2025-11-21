@@ -3,6 +3,16 @@
 > 
 > #network #shell
 
+> [!example] Table of contents
+> - [[#Filtering]]
+> 	- [[#Filtering by port]]
+> 	- [[#Filtering by Protocol]]
+> 	- [[#Logical Operators]]
+> 	- [[#Read packet from file]]
+> 	- [[#Advanced filtering]]
+> - [[#Displaying packet]]
+
+
 |Command|Explanation|
 |---|---|
 |`tcpdump -i INTERFACE`|Captures packets on a specific network interface|
@@ -59,3 +69,32 @@ reading from file traffic.pcap, link-type EN10MB (Ethernet)
 #### filter by length
 - `greater LENGTH`: Filters packets that have a length greater than or equal to the specified length
 - `less LENGTH`: Filters packets that have a length less than or equal to the specified length
+
+#### more advanced filtering
+- <font color = "c2e3f4">check the</font> `pcap-filter` <font color = "c2e3f4">manual page by issuing the command</font> `man pcap-filter`
+
+#### filter TCP packet by TCP flags
+You can use `tcp[tcpflags]` to refer to the TCP flags field. The following TCP flags are available to compare with:
+
+- `tcp-syn` TCP SYN (Synchronize)
+- `tcp-ack` TCP ACK (Acknowledge)
+- `tcp-fin` TCP FIN (Finish)
+- `tcp-rst` TCP RST (Reset)
+- `tcp-push` TCP Push
+
+Based on the above, we can write:
+
+- `tcpdump "tcp[tcpflags] == tcp-syn"` to capture TCP packets with **only** the SYN (Synchronize) flag set, while all the other flags are unset.
+- `tcpdump "tcp[tcpflags] & tcp-syn != 0"` to capture TCP packets with **at least** the SYN (Synchronize) flag set.
+- `tcpdump "tcp[tcpflags] & (tcp-syn|tcp-ack) != 0"` to capture TCP packets with **at least** the SYN (Synchronize) **or** ACK (Acknowledge) flags set.
+
+---
+
+### Displaying packet
+|Command|Explanation|
+|---|---|
+|`tcpdump -q`|Quick and quite: brief packet information|
+|`tcpdump -e`|Include MAC addresses|
+|`tcpdump -A`|Print packets as ASCII encoding|
+|`tcpdump -xx`|Display packets in hexadecimal format|
+|`tcpdump -X`|Show packets in both hexadecimal and ASCII formats|
