@@ -6,7 +6,7 @@
 [[ARP]]
 [[NAT]]
 [[ICMP]]
-[[WHOIS, FTP, SMTP, POP3, IMAP]]
+[[WHOIS, FTP, SMTP, POP3, IMAP PROTOCOL]]
 [[TLS]]
 [[Wireshark]]
 [[tcpdump]]

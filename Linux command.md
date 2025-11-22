@@ -292,6 +292,10 @@ user@TryHackMe$ whois twitter.com
 <font color = "c2e3f4">capturing network traffic and taking a closer look at the various protocols</font>
 
 ---
+### [[nmap]]
+- <font color = "c2e3f4"> Nmap is an open-source network scanner</font>
+
+---
 
 ### wc
 - 
