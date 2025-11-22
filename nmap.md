@@ -6,7 +6,7 @@
 | Option                                                              | Explanation                                                                                        |
 | ------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
 | `-sL`                                                               | List scan – list targets without scanning                                                          |
-| [[#**_Host Discovery_**]]                                           |                                                                                                    |
+| [[#**_Host Discovery_**\|Host Discovery]]                           |                                                                                                    |
 | `-sn`                                                               | Ping scan – host discovery only                                                                    |
 | **_Port Scanning_**                                                 |                                                                                                    |
 | `-sT`                                                               | TCP connect scan – complete three-way handshake                                                    |
@@ -32,4 +32,15 @@
 | `-oX <filename>`                                                    | XML output                                                                                         |
 | `-oG <filename>`                                                    | `grep`-able output                                                                                 |
 | `-oA <basename>`                                                    | Output in all major formats                                                                        |
+
+---
+
 ## **_Host Discovery_**
+- IP range using `-`: If you want to scan all the IP addresses from 192.168.0.1 to 192.168.0.10, you can write `192.168.0.1-10`
+- IP subnet using `/`: If you want to scan a subnet, you can express it as `192.168.0.1/24`, and this would be equivalent to `192.168.0.0-255`
+- Hostname: You can also specify your target by hostname, for example, `example.thm`
+
+---
+
+- run Nmap with `sudo` privileges : Nmap would automatically use SYN scan (`-sS`)
+- default to connect scan (`-sT`) if run as a local user
