@@ -1,7 +1,8 @@
 > [!info] LINK & TAG
 > [TryHackMe | Metasploit: Introduction](https://tryhackme.com/room/metasploitintro)
-> 
+> [[Metasploit Introduction]]
 > #metasploit#exploitation
+
 
 Metasploit 主要用途：  
 **利用漏洞（exploit）、搭配 payload，進行滲透攻擊、漏洞驗證、後期滲透（post-exploitation）。**
