@@ -4,3 +4,5 @@
 [[SSH]]
 [[Digital Signature & Certificate]]
 [[PGP & GPG]]
+[[Hashing]]
+[[JohntheRipper]]
