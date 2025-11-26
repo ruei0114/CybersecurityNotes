@@ -1,6 +1,6 @@
 > [!info] LINK & TAG
 > [TryHackMe | Metasploit: Introduction](https://tryhackme.com/room/metasploitintro)
-> 
+> [[Metasploit Exploitation]]
 > #metasploit #exploitation 
 
 
