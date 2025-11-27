@@ -1,14 +1,8 @@
 > [!info] LINK & TAG
-> [show word](URL)
+> [TryHackMe | Burp Suite: The Basics](https://tryhackme.com/room/burpsuitebasics)
 > 
 > #tag
 
-
-以下是將你提供的內容整理成 **精緻又好讀的筆記版本（繁中）**，幫你把資訊像打亮的金屬件一樣清楚呈現 ✨
-
----
-
-# **Burp Suite Community 功能總整理（筆記）**
 
 雖然 **Burp Suite Community** 相較於專業版功能受限，但它依然像一把多段式折刀，提供許多對 Web 測試極具價值的工具。以下是其核心功能整理：
 
