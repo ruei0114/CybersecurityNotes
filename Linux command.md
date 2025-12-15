@@ -205,7 +205,7 @@ users:~$ file "hello.txt"
 
 ---
 
-### telnet
+### [[telnet]]
 - <font color = "c2e3f4">connect to a server</font>
 - <font color = "c2e3f4">communicate with a remote system and issue text commands</font>
 - <font color = "efb730">telnet+[ip address]+[port number]</font>
@@ -233,7 +233,7 @@ Connection closed.
 
 ---
 
-### ping
+### [[ping]]
 - <font color = "c2e3f4"> test connectivity to a target system and measures the round-trip time (RTT)</font>
 ```sh
 user@TryHackMe$ ping 192.168.11.1 -c 4 
@@ -250,7 +250,7 @@ rtt min/avg/max/mdev = 3.805/10.596/23.366/7.956 ms
 
 ---
 
-### traceroute
+### [[traceroute]]
 - <font color = "c2e3f4">discover the route from your host to the target.</font>
 - [[ICMP]]
 ---
@@ -276,6 +276,9 @@ user@TryHackMe$ whois twitter.com
 ---
 
 ### nslookup
+
+^798710
+
 - <font color = "c2e3f4">Name Server Look Up</font>
 - <font color = "efb730">nslookup+[-type=[type]]+[domain]+[DNS server]</font>
 ```sh
@@ -285,6 +288,9 @@ user@TryHackMe$ nslookup -type=A tryhackme.com 1.1.1.1
 ---
 
 ### dig
+
+^4f7301
+
 <font color = "c2e3f4">Domain Information Groper</font>
 - <font color = "efb730">dig+@[SERVER]+[DOMAIN_NAME]+[TYPE]</font>
 ```sh
@@ -318,6 +324,14 @@ user@TryHackMe$ dig tryhackme.com MX
 
 ---
 
+### [[netcat]]
+
+
+---
+
+### curl
+
+---
 ### wc
 - 
 
