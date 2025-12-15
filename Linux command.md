@@ -31,6 +31,7 @@
 > - [[#ping]]
 > - [[#traceroute]]
 > - [[#wget]]
+> - [[#whois]]
 > - [[#chmod]]
 > - [[#grep]]
 > - [[#tcpdump|tcpdump]]
