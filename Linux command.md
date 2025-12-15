@@ -32,6 +32,8 @@
 > - [[#traceroute]]
 > - [[#wget]]
 > - [[#whois]]
+> - [[#nslookup]]
+> - [[#dig]]
 > - [[#chmod]]
 > - [[#grep]]
 > - [[#tcpdump|tcpdump]]
@@ -269,6 +271,24 @@ rtt min/avg/max/mdev = 3.805/10.596/23.366/7.956 ms
 - <font color = "efb730">whois+[domain]</font>
 ```
 user@TryHackMe$ whois twitter.com
+```
+
+---
+
+### nslookup
+- <font color = "c2e3f4">Name Server Look Up</font>
+- <font color = "efb730">nslookup+[-type=[type]]+[domain]+[DNS server]</font>
+```sh
+user@TryHackMe$ nslookup -type=A tryhackme.com 1.1.1.1
+```
+
+---
+
+### dig
+<font color = "c2e3f4">Domain Information Groper</font>
+- <font color = "efb730">dig+@[SERVER]+[DOMAIN_NAME]+[TYPE]</font>
+```sh
+user@TryHackMe$ dig tryhackme.com MX
 ```
 
 ---
