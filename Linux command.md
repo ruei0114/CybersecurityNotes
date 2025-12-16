@@ -205,7 +205,10 @@ users:~$ file "hello.txt"
 
 ---
 
-### [[telnet]]
+### telnet
+
+^d4b1c2
+
 - <font color = "c2e3f4">connect to a server</font>
 - <font color = "c2e3f4">communicate with a remote system and issue text commands</font>
 - <font color = "efb730">telnet+[ip address]+[port number]</font>
@@ -234,6 +237,9 @@ Connection closed.
 ---
 
 ### [[ping]]
+
+^290d80
+
 - <font color = "c2e3f4"> test connectivity to a target system and measures the round-trip time (RTT)</font>
 ```sh
 user@TryHackMe$ ping 192.168.11.1 -c 4 
@@ -250,7 +256,10 @@ rtt min/avg/max/mdev = 3.805/10.596/23.366/7.956 ms
 
 ---
 
-### [[traceroute]]
+### traceroute
+
+^8c816f
+
 - <font color = "c2e3f4">discover the route from your host to the target.</font>
 - [[ICMP]]
 ---
@@ -324,7 +333,30 @@ user@TryHackMe$ dig tryhackme.com MX
 
 ---
 
-### [[netcat]]
+### netcat
+
+^d5ff4a
+
+- <font color = "c2e3f4">get target server information</font>
+- <font color = "efb730">nc+[target IP]+[Port]</font>
+- shift+enter
+- `GET / HTTP/1.1`
+- `host: netcat`
+```sh
+pentester@TryHackMe$ nc 10.49.147.59 80
+```
+---
+- <font color = "c2e3f4">listen on a TCP port and connect to a listening port on another system(like a server)</font>
+- <font color = "efb730">nc+[-vnlp]+[Port]</font>
+
+| option | meaning                                                    |
+| ------ | ---------------------------------------------------------- |
+| -l     | Listen mode                                                |
+| -p     | Specify the Port number                                    |
+| -n     | Numeric only; no resolution of hostnames via DNS           |
+| -v     | Verbose output (optional, yet useful to discover any bugs) |
+| -vv    | Very Verbose (optional)                                    |
+| -k     | Keep listening after client disconnects                    |
 
 
 ---
