@@ -8,6 +8,16 @@
 | `-sL`                                                               | List scan – list targets without scanning                                                          |
 | [[#**_Host Discovery_**\|Host Discovery]]                           |                                                                                                    |
 | `-sn`                                                               | Ping scan – host discovery only                                                                    |
+| -PR                                                                 | ARP scan                                                                                           |
+| -PE                                                                 | ICMP Echo Scan                                                                                     |
+| -PP                                                                 | ICMP Timestamp Scan                                                                                |
+| -PM                                                                 | ICMP Address Mask Scan                                                                             |
+| -PS                                                                 | TCP SYN Ping Scan                                                                                  |
+|                                                                     |                                                                                                    |
+| -PA                                                                 | TCP ACK Ping Scan                                                                                  |
+|                                                                     |                                                                                                    |
+| -PU                                                                 | UDP Ping Scan                                                                                      |
+|                                                                     |                                                                                                    |
 | **_Port Scanning_**                                                 |                                                                                                    |
 | `-sT`                                                               | TCP connect scan – complete three-way handshake                                                    |
 | `-sS`                                                               | TCP SYN – only first step of the three-way handshake                                               |
@@ -45,15 +55,15 @@
 - run Nmap with `sudo` privileges : Nmap would automatically use SYN scan (`-sS`)
 - default to connect scan (`-sT`) if run as a local user
 
-|Scan Type|Example Command|
-|---|---|
-|ARP Scan|`sudo nmap -PR -sn MACHINE_IP/24`|
-|ICMP Echo Scan|`sudo nmap -PE -sn MACHINE_IP/24`|
-|ICMP Timestamp Scan|`sudo nmap -PP -sn MACHINE_IP/24`|
-|ICMP Address Mask Scan|`sudo nmap -PM -sn MACHINE_IP/24`|
-|TCP SYN Ping Scan|`sudo nmap -PS22,80,443 -sn MACHINE_IP/30`|
-|TCP ACK Ping Scan|`sudo nmap -PA22,80,443 -sn MACHINE_IP/30`|
-|UDP Ping Scan|`sudo nmap -PU53,161,162 -sn MACHINE_IP/30`|
+| Scan Type              | Example Command                             |
+| ---------------------- | ------------------------------------------- |
+| ARP Scan               | `sudo nmap -PR -sn MACHINE_IP/24`           |
+| ICMP Echo Scan         | `sudo nmap -PE -sn MACHINE_IP/24`           |
+| ICMP Timestamp Scan    | `sudo nmap -PP -sn MACHINE_IP/24`           |
+| ICMP Address Mask Scan | `sudo nmap -PM -sn MACHINE_IP/24`           |
+| TCP SYN Ping Scan      | `sudo nmap -PS22,80,443 -sn MACHINE_IP/30`  |
+| TCP ACK Ping Scan      | `sudo nmap -PA22,80,443 -sn MACHINE_IP/30`  |
+| UDP Ping Scan          | `sudo nmap -PU53,161,162 -sn MACHINE_IP/30` |
 
 |Option|Purpose|
 |---|---|
