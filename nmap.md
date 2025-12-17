@@ -7,17 +7,17 @@
 | ------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
 | `-sL`                                                               | List scan – list targets without scanning                                                          |
 | [[#**_Host Discovery_**\|Host Discovery]]                           |                                                                                                    |
+| -n                                                                  | no DNS lookup                                                                                      |
+| -R                                                                  | reverse-DNS lookup for all hosts                                                                   |
 | `-sn`                                                               | Ping scan – host discovery only                                                                    |
 | -PR                                                                 | ARP scan                                                                                           |
 | -PE                                                                 | ICMP Echo Scan                                                                                     |
 | -PP                                                                 | ICMP Timestamp Scan                                                                                |
 | -PM                                                                 | ICMP Address Mask Scan                                                                             |
 | -PS                                                                 | TCP SYN Ping Scan                                                                                  |
-|                                                                     |                                                                                                    |
 | -PA                                                                 | TCP ACK Ping Scan                                                                                  |
-|                                                                     |                                                                                                    |
 | -PU                                                                 | UDP Ping Scan                                                                                      |
-|                                                                     |                                                                                                    |
+| TCP/UDP to specify scan port                                        | `-PA21`, `-PA21-25` and <br>`-PA80,443,8080`                                                       |
 | **_Port Scanning_**                                                 |                                                                                                    |
 | `-sT`                                                               | TCP connect scan – complete three-way handshake                                                    |
 | `-sS`                                                               | TCP SYN – only first step of the three-way handshake                                               |
@@ -45,6 +45,9 @@
 
 ---
 
+![[Pasted image 20251217220812.png]]
+
+---
 ## **_Host Discovery_**
 - IP range using `-`: If you want to scan all the IP addresses from 192.168.0.1 to 192.168.0.10, you can write `192.168.0.1-10`
 - IP subnet using `/`: If you want to scan a subnet, you can express it as `192.168.0.1/24`, and this would be equivalent to `192.168.0.0-255`
@@ -54,19 +57,4 @@
 
 - run Nmap with `sudo` privileges : Nmap would automatically use SYN scan (`-sS`)
 - default to connect scan (`-sT`) if run as a local user
-
-| Scan Type              | Example Command                             |
-| ---------------------- | ------------------------------------------- |
-| ARP Scan               | `sudo nmap -PR -sn MACHINE_IP/24`           |
-| ICMP Echo Scan         | `sudo nmap -PE -sn MACHINE_IP/24`           |
-| ICMP Timestamp Scan    | `sudo nmap -PP -sn MACHINE_IP/24`           |
-| ICMP Address Mask Scan | `sudo nmap -PM -sn MACHINE_IP/24`           |
-| TCP SYN Ping Scan      | `sudo nmap -PS22,80,443 -sn MACHINE_IP/30`  |
-| TCP ACK Ping Scan      | `sudo nmap -PA22,80,443 -sn MACHINE_IP/30`  |
-| UDP Ping Scan          | `sudo nmap -PU53,161,162 -sn MACHINE_IP/30` |
-
-|Option|Purpose|
-|---|---|
-|`-n`|no DNS lookup|
-|`-R`|reverse-DNS lookup for all hosts|
-|`-sn`|host discovery only|
+- Unprivileged user scan (`-PS`, `-sT`) usually have no choice but to establish 3-way handshake if the port is opent. (will show on the log)
