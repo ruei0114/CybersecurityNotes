@@ -30,8 +30,10 @@
 | `-Pn`                                                               | Treat all hosts as online – scan hosts that appear to be down                                      |
 | **_Advanced Port Scans_**                                           |                                                                                                    |
 | -sN                                                                 | TCP Null Scan                                                                                      |
-| -sF                                                                 |                                                                                                    |
-| -sX                                                                 |                                                                                                    |
+| -sF                                                                 | TCP FIN Scan                                                                                       |
+| -sX                                                                 | TCP Xmas Scan                                                                                      |
+| -sM                                                                 | TCP Maimon Scan                                                                                    |
+|                                                                     |                                                                                                    |
 | **_Service Detection_**                                             |                                                                                                    |
 | `-O`                                                                | OS detection                                                                                       |
 | `-sV`                                                               | Service version detection                                                                          |
