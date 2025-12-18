@@ -1,5 +1,8 @@
 > [!info] LINK & TAG
 > [TryHackMe | Nmap: The Basics](https://tryhackme.com/room/nmap)
+> [TryHackMe | Nmap Live Host Discovery](https://tryhackme.com/room/nmap01)
+> [TryHackMe | Nmap Basic Port Scans](https://tryhackme.com/room/nmap02)
+> [TryHackMe | Nmap Advanced Port Scans](https://tryhackme.com/room/nmap03)
 > 
 > #network #shell 
 
@@ -25,6 +28,10 @@
 | `-F`                                                                | Fast mode – scans the 100 most common ports                                                        |
 | `-p[range]`                                                         | Specifies a range of port numbers – `-p-` scans all the ports                                      |
 | `-Pn`                                                               | Treat all hosts as online – scan hosts that appear to be down                                      |
+| **_Advanced Port Scans_**                                           |                                                                                                    |
+| -sN                                                                 | TCP Null Scan                                                                                      |
+| -sF                                                                 |                                                                                                    |
+| -sX                                                                 |                                                                                                    |
 | **_Service Detection_**                                             |                                                                                                    |
 | `-O`                                                                | OS detection                                                                                       |
 | `-sV`                                                               | Service version detection                                                                          |
