@@ -33,7 +33,14 @@
 | -sF                                                                 | TCP FIN Scan                                                                                       |
 | -sX                                                                 | TCP Xmas Scan                                                                                      |
 | -sM                                                                 | TCP Maimon Scan                                                                                    |
-|                                                                     |                                                                                                    |
+| -sA                                                                 | TCP ACK Scan                                                                                       |
+| -sW                                                                 | TCP Window Scan                                                                                    |
+| --scanflags URGACKPSHRSTSYNFIN                                      | Custom TCP Scan                                                                                    |
+| -S SPOOFED_IP                                                       | Spoofed Source IP                                                                                  |
+| --spoof-mac SPOOFED_MAC                                             | Spoofed MAC Address                                                                                |
+| -D DECOY_IP,ME                                                      | Decoy Scan                                                                                         |
+| -sI ZOMBIE_IP                                                       | Idle (Zombie) Scan                                                                                 |
+| -f                                                                  | Fragment IP data into 8 bytes                                                                      |
 | **_Service Detection_**                                             |                                                                                                    |
 | `-O`                                                                | OS detection                                                                                       |
 | `-sV`                                                               | Service version detection                                                                          |
@@ -44,6 +51,7 @@
 | `--min-rate <number>` and `--max-rate <number>`                     | Minimum and maximum rate (packets/second)                                                          |
 | `--host-timeout`                                                    | Maximum amount of time to wait for a target host                                                   |
 | **_Real-time output_**                                              |                                                                                                    |
+| --reason                                                            | explains how Nmap made its conclusion                                                              |
 | `-v`                                                                | Verbosity level – for example, `-vv` and `-v4`                                                     |
 | `-d`                                                                | Debugging level – for example `-d` and `-d9`                                                       |
 | **_Report_**                                                        |                                                                                                    |
