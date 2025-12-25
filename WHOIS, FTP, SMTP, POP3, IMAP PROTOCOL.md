@@ -1,5 +1,6 @@
 > [!info] LINK & TAG
 > [TryHackMe | Networking Core Protocols](https://tryhackme.com/room/networkingcoreprotocols)
+> [TryHackMe | Protocols and Servers](https://tryhackme.com/room/protocolsandservers)
 > 
 > #network 
 
@@ -10,6 +11,7 @@
 ---
 
 ### ftp
+- <font color = "c2e3f4">port 21</font>
 - <font color = "c2e3f4">transfer files</font>
 
 ---

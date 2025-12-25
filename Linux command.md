@@ -209,6 +209,8 @@ users:~$ file "hello.txt"
 
 ^d4b1c2
 
+- <font color = "c2e3f4">port 23</font>
+- <font color = "c2e3f4">application layer protocol</font>
 - <font color = "c2e3f4">connect to a server</font>
 - <font color = "c2e3f4">communicate with a remote system and issue text commands</font>
 - <font color = "efb730">telnet+[ip address]+[port number]</font>
