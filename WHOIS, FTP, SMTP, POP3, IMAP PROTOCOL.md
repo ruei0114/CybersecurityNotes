@@ -17,14 +17,17 @@
 ---
 
 ### smtp
+- <font color = "c2e3f4">port 25</font>
 - <font color = "c2e3f4">send email</font>
 
 ---
 
 ### pop3
+- <font color = "c2e3f4">port 110</font>
 - <font color = "c2e3f4">receive email</font>
 
 ---
 
 ### imap
+- <font color = "c2e3f4">port 143</font>
 - <font color = "c2e3f4">synchronizing email</font>
