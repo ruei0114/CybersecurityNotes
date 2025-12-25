@@ -3,6 +3,7 @@
 > [TryHackMe | Nmap Live Host Discovery](https://tryhackme.com/room/nmap01)
 > [TryHackMe | Nmap Basic Port Scans](https://tryhackme.com/room/nmap02)
 > [TryHackMe | Nmap Advanced Port Scans](https://tryhackme.com/room/nmap03)
+> [TryHackMe | Nmap Post Port Scans](https://tryhackme.com/room/nmap04)
 > 
 > #network #shell 
 
@@ -44,7 +45,16 @@
 | **_Service Detection_**                                             |                                                                                                    |
 | `-O`                                                                | OS detection                                                                                       |
 | `-sV`                                                               | Service version detection                                                                          |
-| `-A`                                                                | OS detection, version detection, and other additions                                               |
+| `-sV --version-light`                                               | try the most likely probes (2)                                                                     |
+| `-sV --version-all`                                                 | try all available probes (9)                                                                       |
+| `--traceroute`                                                      | run traceroute to target                                                                           |
+| `--script=SCRIPTS`                                                  | Nmap scripts to run                                                                                |
+| `-sC` or `--script=default`                                         | run default scripts                                                                                |
+| `-A`                                                                | equivalent to `-sV -O -sC --traceroute`                                                            |
+| `-oN`                                                               | save output in normal format                                                                       |
+| `-oG`                                                               | save output in grepable format                                                                     |
+| `-oX`                                                               | save output in XML format                                                                          |
+| `-oA`                                                               | save output in normal, XML and Grepable formats                                                    |
 | **_Timing_**                                                        |                                                                                                    |
 | `-T<0-5>`                                                           | Timing template – paranoid (0), sneaky (1), polite (2), normal (3), aggressive (4), and insane (5) |
 | `--min-parallelism <numprobes>` and `--max-parallelism <numprobes>` | Minimum and maximum number of parallel probes                                                      |
