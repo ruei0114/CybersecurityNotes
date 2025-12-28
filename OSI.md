@@ -57,6 +57,8 @@
 - <font color = "c2e3f4"> ensures the data is delivered in a form the application layer can understand</font>
 - <font color = "c2e3f4">handles data encoding, compression, and encryption</font>
 - <font color = "efb730">MIME</font>
+- <font color = "efb730">SSL</font>
+- <font color = "efb730">TLS</font>
 
 ---
 
@@ -64,4 +66,6 @@
 - <font color = "c2e3f4">provides network services directly to end-user applications</font>
 - <font color = "efb730">HTTP</font>
 - <font color = "efb730">FTP</font>
+- <font color = "efb730">SMTP</font>
+- <font color = "efb730">POP3</font>
 - <font color = "efb730">DNS</font>
