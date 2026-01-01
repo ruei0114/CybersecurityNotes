@@ -149,8 +149,10 @@ users:~$ mv file1 file2 file3 new_directory
 - <font color = "c2e3f4">-iname ignore capitalization</font>
 - <font color = "efb730">find+[path]+[-iname]+[file name]</font>
 - <font color = "efb730">find+[path]+[-iname]+["*.extension"]</font>
-```
+```sh
 users:~$ find . -iname "*.txt"
+find / -name test.txt > /dev/null 2>&1    # 將輸出都丟掉
+find / -name test.txt 2>dev/null          # 將錯誤訊息丟掉
 ```
 
 ---
